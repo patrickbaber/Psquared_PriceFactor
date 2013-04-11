@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Psquared_PriceFactor>
+            <version>0.1.0</version>
+        </Psquared_PriceFactor>
+    </modules>
+    <global>
+        <models>
+            <pricefactor>
+                <class>Psquared_PriceFactor_Model</class>
+            </pricefactor>
+        </models>
+        <helpers>
+            <pricefactor>
+                <class>Psquared_PriceFactor_Helper</class>
+            </pricefactor>
+        </helpers>
+        <blocks>
+            <pricefactor>
+                <class>Psquared_PriceFactor_Block</class>
+            </pricefactor>
+            <!-- Choose one of the following sections -->
+            <!-- 1st: Default - begin -->
+            <catalog>
+                <rewrite>
+                    <product_price>Psquared_PriceFactor_Block_Product_Price</product_price>
+                </rewrite>
+            </catalog>
+            <!-- 1st: Default - end -->
+            <!-- 2nd: If the extension German Setup is installed - begin -->
+            <!-- <germansetup>
+                <rewrite>
+                    <catalog_product_price>Psquared_PriceFactor_Block_Product_Price</catalog_product_price>
+                </rewrite>
+            </germansetup> -->
+            <!-- 2nd: If the extension German Setup is installed - end -->
+        </blocks>
+    </global>
+    <default>
+        <catalog>
+            <price_factor>
+                <enable_price_factor>0</enable_price_factor>
+                <price_factor>2</price_factor>
+                <show_minimal_price>0</show_minimal_price>
+                <clear_cart_on_store_view_switch>1</clear_cart_on_store_view_switch>
+            </price_factor>
+        </catalog>
+    </default>
+    <frontend>
+        <events>
+            <catalog_product_collection_load_after>
+                <observers>
+                    <pricefactor>
+                        <type>singleton</type>
+                        <class>pricefactor/observer</class>
+                        <method>catchCatalogProductCollectionLoadAfter</method>
+                    </pricefactor>
+                </observers>
+            </catalog_product_collection_load_after>
+            <catalog_product_load_after>
+                <observers>
+                    <pricefactor>
+                        <type>singleton</type>
+                        <class>pricefactor/observer</class>
+                        <method>catchCatalogProductLoadAfter</method>
+                    </pricefactor>
+                </observers>
+            </catalog_product_load_after>
+            <controller_action_predispatch>
+                <observers>
+                    <pricefactor>
+                        <type>singleton</type>
+                        <class>pricefactor/observer</class>
+                        <method>catchControllerActionPredispatch</method>
+                    </pricefactor>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <pricefactor>
+                    <files>
+                        <default>Psquared_PriceFactor.csv</default>
+                    </files>
+                </pricefactor>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>

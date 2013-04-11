@@ -1,0 +1,8 @@
+"Price Factor","Preisfaktor"
+"Enable Price Factor","Preisfaktor aktivieren"
+"Show Minimal Price","Zeige Minimalpreis"
+"Clear Cart on Store View Switch","Leere Warenkorb bei Wechsel des Store Views"
+"This option enables a price factor for the product catalog.","Diese Option aktiviert den Preisfaktor für den Produktkatalog."
+"Decimal price factor which is multiplied with the product prices in the product catalog.","Preisfaktor als Dezimalzahl, welcher mit den Produktpreisen des Produktkatalogs multiplziert wird."
+"Disable this option if you use a price factor larger than 1 to disable the nonsensical presentation of the minimal price.","Deaktiviere diese Option, wenn der Preisfaktor größer als 1 ist, um die unnötige Darstellung des Minimalpreises zu unterbinden."
+"Prevent wrong price factors on the products which already added to the cart.","Vermeidet falsche Preisfaktoren bei Produkten, die bereits dem Warenkorb hinzugefügt wurden."
