@@ -36,7 +36,7 @@ class Psquared_PriceFactor_Model_Observer
         if (Mage::getStoreConfig('catalog/price_factor/clear_cart_on_store_view_switch') == 1){
             if (!empty($_GET['___from_store']) && !empty($_GET['___store'])) {
                 foreach(Mage::getSingleton('checkout/session')->getQuote()->getItemsCollection() as $item){
-                    Mage::getSingleton('checkout/cart')->removeItem($item->getId() )->save();
+                    Mage::getSingleton('checkout/cart')->removeItem($item->getId())->save();
                 }
             }
         }

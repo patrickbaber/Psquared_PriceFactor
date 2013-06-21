@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config>
     <sections>
-        <catalog  translate="label" module="pricefactor">
+        <catalog translate="label" module="pricefactor">
             <groups>
                 <price_factor translate="label">
                     <label>Price Factor</label>
